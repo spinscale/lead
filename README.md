@@ -21,7 +21,7 @@ make it available.
 ## Configuration
 
 In order to run `lead` you need a single directory consisting of a configuration
-file and a `templates` directory. This repository contains a sample `config` directory.
+file and a `watches` directory. This repository contains a sample `config` directory.
 
 ### `lead.yml` configuration
 
@@ -37,15 +37,12 @@ watches:
   - watch:
     # id of the watch, must be unique
     id: "my_first_watch"
-    # template to refer to, can also be a 1:1 mapping if you only have custom watches
-    template: logging
     # variables to be used in the template
     vars:
       username: "alex"
 
   - watch:
     id: "my_second_watch"
-    template: logging
     vars:
       username: "stefan"
 ```
@@ -111,6 +108,7 @@ You can either always use the `-c path/to/config/directory` parameter for each o
 the actions or set `export LEAD_CONFIG=/path/to/config/directory` in your environment
 and then this will be used by default.
 
+
 ### `lead verify`
 
 The `verify` command is a local only call, which
@@ -119,6 +117,7 @@ The `verify` command is a local only call, which
 * checks if all referred templates exists
 * compiles all templates to their final JSON
 * ensures the JSON is valid
+
 
 ### `lead deploy`
 
