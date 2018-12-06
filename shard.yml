@@ -1,0 +1,21 @@
+name: lead
+version: 0.1.0
+
+authors:
+  - Alexander Reelsen <alexander@reelsen.net>
+
+dependencies:
+  clim:
+    github: at-grandpa/clim
+  crinja:
+    github: straight-shoota/crinja
+    # after a new release for 0.27 we can use a version again
+    branch: master
+
+targets:
+  lead:
+    main: src/lead.cr
+
+crystal: 0.27
+
+license: Apache2

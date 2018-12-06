@@ -1,0 +1,43 @@
+
+# Elasticsearch information
+# mandatory: url (can also be https)
+# optional: user/pass for basic auth
+elasticsearch:
+  host: localhost
+  #port: 9200
+  user: my_user
+  # MUST BE SECRET
+  pass: my_pass
+
+# watches configuration
+#  "mustache" : "{% raw %}{{ctx.payload.foo}}{% endraw %}",
+#  "mustache2" : "{{ '{{ctx.payload.foo}}' }}"
+#
+# a watch can have the following sub fields
+#
+# id - the unique ID of the watch on the alerting side
+# vars - variables used for rendering
+# these are default variables available in every watch
+vars:
+  username: "monitoring"
+
+# if you need to have dynamic variables on a per watch base, then you can configure
+# vars on a per watch base
+watches:
+    my_first_watch:
+      vars:
+        username: "alex"
+
+    my_second_watch:
+      vars:
+        tenant: "elastic"
+
+    my_third_watch:
+      vars:
+        tenant: "swiftype"
+        email: "user@example.org"
+
+    my_fourth_watch:
+      vars:
+        tenant: "test_tenant"
+        email: "user@example.org"

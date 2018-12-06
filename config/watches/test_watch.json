@@ -1,0 +1,23 @@
+{
+  "trigger": {
+    "schedule": {
+      "interval": "12h"
+    }
+  },
+  "input": {
+    "simple": {
+      "foo": "bar"
+    }
+  },
+  "condition": {
+    "script":  { "source": "return ctx.payload.foo == 'bar'", "lang":"painless"}
+  },
+  "actions": {
+    "logme": {
+      "logging": {
+        "level":"info",
+        "text": "{{'{{ctx}}'}}"
+      }
+    }
+  }
+}

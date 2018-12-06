@@ -1,0 +1,10 @@
+version: 1.0
+shards:
+  clim:
+    github: at-grandpa/clim
+    version: 0.4.1
+
+  crinja:
+    github: straight-shoota/crinja
+    commit: 0e2b3c6555efef5bc4e66561f679c1b6fe5efd46
+

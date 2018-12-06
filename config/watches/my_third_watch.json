@@ -1,0 +1,22 @@
+{
+  "metadata" : {
+    "id" : "{{ _id }}",
+    "tenant" : "{{ tenant }}"
+  },
+  "trigger": {
+  {% include "include_trigger.tmpl" %}
+  },
+  "input": {
+    "simple": {
+      "foo":"bar"
+    }
+  },
+  "condition":{ "script" :
+    { "source":"return ctx.payload.foo == 'bar'","lang":"painless" }
+  },
+  "actions":{
+    "logme":{
+      "logging":{ "level":"info","text":"{{ '{{ctx.payload}}' }}" }
+    }
+  }
+}
