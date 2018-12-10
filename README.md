@@ -3,9 +3,10 @@
 This is a small command line tool helping to manage watches via a versioning system
 by managing templates.
 
-**Note**: This is a prototype for gathering feedback and not to be supposed a
-full production-ready tool.
+**Note: This is a prototype for gathering feedback and not to be supposed a
+full production-ready tool.**
 
+**Note:This is only intended to gather first feedback, so please open issues for further discussion. Thank you!**
 
 ## Installation
 
